@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MineBlock — Mobs e Atualizações</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #1e1e1e;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+        
+        header {
+            background: #111;
+            padding: 15px;
+            text-align: center;
+            font-size: 22px;
+            font-weight: bold;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            background: #181818;
+            padding: 10px 0;
+            font-size: 18px;
+        }
+        
+        nav a {
+            color: #ddd;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        
+        nav a:hover {
+            color: white;
+        }
+        
+        .content {
+            max-width: 900px;
+            margin: 25px auto;
+            padding: 20px;
+            background: #222;
+            border-radius: 10px;
+        }
+        
+        .section {
+            display: none;
+        }
+        
+        .active {
+            display: block;
+        }
+        
+        .mob {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid #333;
+        }
+        
+        .mob-info {
+            max-width: 70%;
+        }
+        
+        .mob-img {
+            width: 70px;
+            height: auto;
+            border-radius: 4px;
+        }
+        
+        h2 {
+            margin-top: 0;
+        }
+        
+        .updates article {
+            background: #2a2a2a;
+            padding: 12px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+        
+        .updates a {
+            color: #8ab4ff;
+        }
+    </style>
+
+    <script>
+        function showSection(id) {
+            document.querySelectorAll('.section').forEach(sec => sec.classList.remove('active'));
+            document.getElementById(id).classList.add('active');
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <header>MineBlock — Informações Rápidas</header>
+
+    <nav>
+        <a onclick="showSection('home')">Home</a>
+        <a onclick="showSection('updates')">Atualizações</a>
+        <a onclick="showSection('guides')">Guias</a>
+        <a onclick="showSection('about')">Sobre</a>
+    </nav>
+
+    <div class="content">
+
+        <!-- HOME (MOBS) -->
+        <div id="home" class="section active">
+            <h2>Mobs</h2>
+
+            <!-- Porco -->
+            <div class="mob">
+                <div class="mob-info">
+                    <h3>Porco</h3>
+                    <p>Mob passivo encontrado em biomas temperados. Fornece carne de porco crua e pode ser montado com sela.</p>
+                </div>
+                <img class="mob-img" src="https://minecraft.wiki/images/Temperate_Pig_JE4_BE2.png" alt="Porco">
+            </div>
+
+            <!-- Zumbi Aldeão -->
+            <div class="mob">
+                <div class="mob-info">
+                    <h3>Villager Zumbi</h3>
+                    <p>Um aldeão infectado. Pode ser curado com maçã dourada e poção de fraqueza.</p>
+                </div>
+                <img class="mob-img" src="https://minecraft.wiki/images/Plains_Zombie_Villager_Base_JE1_BE1.png" alt="Villager Zumbi">
+            </div>
+
+            <!-- Creeper -->
+            <div class="mob">
+                <div class="mob-info">
+                    <h3>Creeper</h3>
+                    <p>Mob explosivo silencioso. Muito perigoso à curta distância.</p>
+                </div>
+                <img class="mob-img" src="https://minecraft.wiki/images/Creeper_JE3_BE1.png" alt="Creeper">
+            </div>
+
+            <!-- Enderman -->
+            <div class="mob">
+                <div class="mob-info">
+                    <h3>Enderman</h3>
+                    <p>Mob neutro que teleporta e pega blocos. Fica hostil se você olhar nos olhos.</p>
+                </div>
+                <img class="mob-img" src="https://minecraft.wiki/images/Enderman_JE3_BE1.png" alt="Enderman">
+            </div>
+
+            <!-- Esqueleto -->
+            <div class="mob">
+                <div class="mob-info">
+                    <h3>Esqueleto</h3>
+                    <p>Mob hostil que usa arco e flecha. Queima ao sol.</p>
+                </div>
+                <img class="mob-img" src="https://minecraft.wiki/images/Skeleton_JE6_BE4.png" alt="Esqueleto">
+            </div>
+
+            <!-- Vaca -->
+            <div class="mob">
+                <div class="mob-info">
+                    <h3>Vaca</h3>
+                    <p>Mob passivo que fornece leite, couro e carne.</p>
+                </div>
+                <img class="mob-img" src="https://minecraft.wiki/images/Cow_JE7_BE4.png" alt="Vaca">
+            </div>
+
+            <!-- Lobo -->
+            <div class="mob">
+                <div class="mob-info">
+                    <h3>Lobo</h3>
+                    <p>Mob neutro que pode ser domesticado para virar um companheiro fiel.</p>
+                </div>
+                <img class="mob-img" src="https://minecraft.wiki/images/Wolf_JE2_BE2.png" alt="Lobo">
+            </div>
+
+        </div>
+
+        <!-- ATUALIZAÇÕES -->
+        <div id="updates" class="section updates">
+            <h2>Atualizações</h2>
+
+            <article>
+                <h4>Minecraft Java 1.21.10 — Hotfix</h4>
+                <p>Correção rápida para bugs encontrados na versão anterior.</p>
+                <a href="https://www.minecraft.net/en-us/article/java-edition-12110-hotfix" target="_blank">Ver no site oficial</a>
+            </article>
+
+            <article>
+                <h4>Preview – Mounts of Mayhem</h4>
+                <p>Novas montarias, armaduras e mecânicas de movimentação.</p>
+                <a href="https://www.minecraft.net/en-us/article/mounts-of-mayhem-preview" target="_blank">Ver no site oficial</a>
+            </article>
+
+            <article>
+                <h4>Bedrock 1.21.120 Patch Notes</h4>
+                <p>Pequenas correções e melhorias aplicadas à edição Bedrock.</p>
+                <a href="https://www.minecraft.net/en-us/article/bedrock-121120-patch-notes" target="_blank">Ver no site oficial</a>
+            </article>
+        </div>
+
+        <!-- GUIAS -->
+        <div id="guides" class="section">
+            <h2>Guias para Iniciantes</h2>
+
+            <h3>Comece com segurança</h3>
+            <ul>
+                <li>Não cave diretamente para baixo.</li>
+                <li>Faça uma cama cedo para evitar mobs.</li>
+                <li>Carregue tochas, comida e madeira.</li>
+            </ul>
+
+            <h3>Ferramentas essenciais</h3>
+            <ul>
+                <li>Comece com ferramentas de pedra.</li>
+                <li>Priorize espada, machado e picareta.</li>
+                <li>Monte uma área de armazenamento.</li>
+            </ul>
+
+            <h3>Exploração</h3>
+            <ul>
+                <li>Use tochas para marcar caminhos.</li>
+                <li>Evite o Nether cedo sem armadura.</li>
+            </ul>
+        </div>
+
+        <!-- SOBRE -->
+        <div id="about" class="section">
+            <h2>Sobre este site</h2>
+            <p>Este site foi criado para fornecer informações rápidas sobre o Minecraft.</p>
+            <p>Contato: <strong>artmorganred2.0@gmail.com</strong></p>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
